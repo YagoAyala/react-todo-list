@@ -1,11 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import Header from './components/Header';
-import Form from './components/Forms';
-import TodosList from './components/TodosList';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Form from "./components/Forms";
+import TodosList from "./components/TodosList";
+import "./App.css";
 
-const App =() => {
-
+const App = () => {
   const initialState = JSON.parse(localStorage.getItem("todos")) || [];
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState(initialState);
@@ -22,25 +21,25 @@ const App =() => {
           <Header />
         </div>
         <div>
-          <Form 
-          input={input}
-          setInput={setInput}
-          todos={todos}
-          setTodos={setTodos}
-          editTodo={editTodo}
-          setEditTodo={setEditTodo}
+          <Form
+            input={input}
+            setInput={setInput}
+            todos={todos}
+            setTodos={setTodos}
+            editTodo={editTodo}
+            setEditTodo={setEditTodo}
           />
         </div>
         <div>
-          <TodosList 
-            todos={todos} 
-            setTodos={setTodos} 
+          <TodosList
+            todos={todos}
+            setTodos={setTodos}
             setEditTodo={setEditTodo}
           />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default App;
