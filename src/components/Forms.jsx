@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const options = [
   {
     label: "Todos",
@@ -25,7 +26,6 @@ export const Form = ({ todo, onAddTodo, onChangeTitle, onChangeSelect }) => {
     } else {
       onAddTodo(title);
     }
-
     setTitle("");
   };
 

@@ -4,6 +4,8 @@ import { Form } from "./components/Forms";
 import { Header } from "./components/Header";
 import { TodosList } from "./components/TodosList";
 import { v4 as uuidV4 } from "uuid";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const App = () => {
   const initialState = JSON.parse(localStorage.getItem("todos")) || [];
@@ -32,8 +34,12 @@ export const App = () => {
     const newTodos = todos.map((item) => {
       if (item.id === todo.id) {
         item.completed = !todo.completed;
+        if(item.completed){
+          toast.success("Item Realizado!")
+        } else {
+          toast.success("Item Desfeito!")
+        }
       }
-
       return item;
     });
 
@@ -46,6 +52,7 @@ export const App = () => {
 
   const onDelete = ({ id }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
+    toast.success("Item Deletado!")
   };
 
   const addTodo = (title) => {
@@ -56,6 +63,7 @@ export const App = () => {
     };
 
     setTodos([...todos, newTodo]);
+    toast.success("Item Adicionado!")
   };
 
   const onChangeTitle = (newTodo) => {
@@ -63,12 +71,11 @@ export const App = () => {
       if (todo.id === newTodo.id) {
         todo = newTodo;
       }
-
       return todo;
     });
-
     setTodos(newTodos);
     setEditedTodo(null);
+    toast.success("Item Atualizado!")
   };
 
   const onChangeSelect = (ev) => {
@@ -97,6 +104,7 @@ export const App = () => {
           onAddTodo={addTodo}
         />
       </div>
+      <ToastContainer />
     </div>
   );
 };
