@@ -82,11 +82,12 @@
   background-color: transparent;
   font-size: 28px;
   border-radius: 50px;
+  position: relative;
+  left: 220%;
 }
 
 .button-complete {
   color: #ff6c6c;
-  margin-right: 10px;
 }
 
 .button-edit {
@@ -96,6 +97,7 @@
 
 .button-delete {
   color: lightseagreen;
+  margin-right: 10px;
 }
 
 .complete {
@@ -119,3 +121,4 @@ input:focus,
 button:focus {
   outline: none;
 }
+
