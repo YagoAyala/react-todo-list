@@ -38,6 +38,7 @@ export const Form = ({ todo, onAddTodo, onChangeTitle, onChangeSelect }) => {
         required
         type="text"
         value={title}
+        maxLength={50}
       />
 
       <button className="button-add" type="submit">
