@@ -1,5 +1,5 @@
 <h2 align="center">
-  Todo list Project<br/>
+  Todo List Project<br/>
 </h2>
 
 ## Projeto Final:
