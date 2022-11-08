@@ -52,6 +52,7 @@ export const App = () => {
 
   const onDelete = ({ id }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
+    setEditedTodo(null);
     toast.success("Item Deletado!")
   };
 
