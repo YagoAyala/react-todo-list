@@ -1,5 +1,4 @@
 import {
-  faCheckCircle,
   faEdit,
   faCheckSquare,
   faSquare,

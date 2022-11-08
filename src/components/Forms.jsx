@@ -40,17 +40,16 @@ export const Form = ({ todo, onAddTodo, onChangeTitle, onChangeSelect }) => {
         value={title}
       />
 
-      <select onChange={onChangeSelect}>
+      <button className="button-add" type="submit">
+        {todo ? "Atualizar" : "Adicionar"}
+      </button>
+      <select className="select-filter" onChange={onChangeSelect}>
         {options.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
         ))}
       </select>
-
-      <button className="button-add" type="submit">
-        {todo ? "Atualizar" : "Adicionar"}
-      </button>
     </form>
   );
 };

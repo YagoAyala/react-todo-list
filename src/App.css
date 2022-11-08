@@ -44,11 +44,24 @@
 .button-add {
   width: 120px;
   padding: 15px 15px;
+  margin-right:10px;
   font-size: 20px;
   border-radius: 10px;
   border: 0;
   background-color: #f1af71;
   cursor: pointer;
+  
+}
+
+.select-filter{
+  width: 150px;
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  background-color: #f1af71;
+  cursor: pointer;
+  text-align: center;
 }
 
 .list-item {
